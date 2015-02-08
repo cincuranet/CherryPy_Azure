@@ -3,6 +3,7 @@ import cherrypy
 
 class Hello(object):
 	@cherrypy.expose
+	@cherrypy.tools.response_headers(headers=[('Content-Type', 'text/plain')])
 	def index(self):
 		message = """\
 Hello Azure!
