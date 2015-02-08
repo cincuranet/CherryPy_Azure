@@ -7,8 +7,9 @@ class Hello(object):
 		message = """\
 Hello Azure!
 Python: {python_version}
+CherryPy: {cherrypy_version}
 """
-		return message.format(python_version=sys.version)
+		return message.format(python_version=sys.version, cherrypy_version=cherrypy.__version__)
 
 
 wsgi_app = cherrypy.Application(Hello(), '/')
