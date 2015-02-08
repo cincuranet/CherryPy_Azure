@@ -1,9 +1,14 @@
+import sys
 import cherrypy
 
 class Hello(object):
 	@cherrypy.expose
 	def index(self):
-		return "Hello Azure!"
+		message = """\
+Hello Azure!
+Python: {python_version}
+"""
+		return message.format(python_version=sys.version)
 
 
 wsgi_app = cherrypy.Application(Hello(), '/')
