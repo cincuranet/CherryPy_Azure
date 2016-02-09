@@ -9,6 +9,8 @@ class Hello(object):
 Hello Azure!
 Python: {python_version}
 CherryPy: {cherrypy_version}
+
+More info: http://blog.cincura.net/id/233498
 """
 		return message.format(python_version=sys.version, cherrypy_version=cherrypy.__version__)
 
